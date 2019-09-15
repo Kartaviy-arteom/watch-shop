@@ -1,13 +1,24 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <title>Интернет магазин часов</title>
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <title>Интернет магазин часов</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="preload" href="fonts/Prata-Regular.woff2" as="font">
+    <link rel="preload" href="fonts/PlayfairDisplay-Regular.woff2" as="font">
+    <link rel="preload" href="fonts/PlayfairDisplay-Bold.woff2" as="font">
+    <link rel="preload" href="fonts/Roboto-Medium.woff2" as="font">
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
   <body>
-    <header class="main-header">
+    <div style="display: none;">
+      <svg xmlns="http://www.w3.org/2000/svg">
+
+      </svg>
+    </div>
+    <header class="main-header container">
       <div class="main-header__wrapper">
-        <nav class="main-nav">
+        <nav class="main-header__nav main-nav">
           <button class="main-nav__toggle" type="button"></button>
           <ul class="main-nav__list site-list">
             <li class="site-list__item"><a href="#">Главная</a></li>
@@ -135,6 +146,17 @@
           <li><img src="img/photo_3.jpg" width="377" height="460" aria-label="стильные часы"></li>
         </ul>
       </section>
+      <footer class="footer">
+        <div class="footer__contact">
+          <a class="main-header__logo" href="#">
+            <svg width="130" height="34">
+              <use xlink:href="#logo"></use>
+            </svg>
+            <a href="tel:+74994504797">8 (499) 450-47-97</a>
+            <a href="mailto:ask@htmlbook.ru?subject=Запрос с сайта">info@conquest.watch.ru</a>
+          </a>
+        </div>
+      </footer>
     </main>
   </body>
 </html>

@@ -1,5 +1,7 @@
 .main-header {
   position: relative;
+  box-sizing: border-box;
+  padding: 0 3.66% 0;
   width: 100vw;
   height: 100vh;
   font-family: "Roboto-Light", "Arial", sans-serif;
@@ -11,4 +13,36 @@
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: 100% 100%;
+
+  &__wrapper {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	padding-top: 2.6875rem;
+  }
+
+  &__logo {
+  	display: block;
+  	margin-right: auto;
+  	width: 8.21%;
+  }
+
+  &__logo svg {
+  	width: 100%;
+  	height: auto;
+  }
+
+  &__social {
+  	position: absolute;
+  	top: 50%;
+  	transform: translateY(-50%);
+  	left: 5%;
+  }
+
+  &__advertised-product {
+  	position: absolute;
+  	top: 0;
+  	left: 50%;
+  }
 }

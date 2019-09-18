@@ -9,10 +9,7 @@
   line-height: 1.2;
   color: #1b1a17;
   overflow: hidden;
-  background-image: url("../img/main-header-ellipse.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  background-size: 100% 100%;
+  background-color: #FDFDFB;
 
   &__wrapper {
 	display: flex;
@@ -42,11 +39,87 @@
 
   &__advertised-product {
   	position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   	top: 0;
   	left: 50%;
-    
+    height: 100%;
+
     img {
-      height: 105vh;
+      position: relative;
+      z-index: 2;
+      width: 36.3vmax;
+      height: auto;
     }
+
+    span {
+      position: absolute;
+      top: 19%;
+      left: 0;
+    }
+
+    span::before {
+      content: "";
+      position: absolute;
+      width: 3.2rem;
+      height: 1px;
+      top: 50%;
+      background-color: #8B8371;
+    }
+
+    span:first-of-type::before {
+      right: calc(-100% - 1rem);
+    }
+
+    span:nth-of-type(2)::before {
+      left: -4.2rem;
+    }
+
+    span:last-child {
+      position: absolute;
+      top: auto;
+      left: auto;
+      bottom: 19%;
+      right: 0;
+    }
+
+    /* span:last-child::before {
+      left: calc(-100% - 1rem);
+    } */
+  }
+
+  &__advertised-product::before {
+    content: "";
+    position: absolute;
+    width: 36.31vw;
+    height: 123.23%;
+    top: -12.27%;
+    right: 34%;
+    border-top-left-radius: 100% 50%;
+    border-bottom-left-radius: 100% 50%;
+    background-image: linear-gradient(180deg, rgba(234, 227, 212, 0) 0%, #EAE3D4 100%);
+  }
+
+  &__content {
+    margin-left: 9.51%;
+    width: 37%;
+  }
+
+  &__subtitle {
+    margin: 0;
+    font-family: "PlayfairDisplay-Regular", "Times", serif;
+    font-size: 2.8125rem;
+    line-height: 1.15;
+
+    span {
+      font-size: 1.875rem;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 0.875rem;
+    line-height: 1.3;
   }
 }

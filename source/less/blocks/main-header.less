@@ -1,4 +1,8 @@
 .main-header {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
   position: relative;
   box-sizing: border-box;
   padding: 0 3.66% 0;
@@ -12,11 +16,13 @@
   background-color: #FDFDFB;
 
   &__wrapper {
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-start;
-	flex-wrap: wrap;
-	padding-top: 2.6875rem;
+    flex-basis: 24%;
+    width: 100%;
+  	display: flex;
+  	flex-direction: row;
+  	justify-content: flex-start;
+  	flex-wrap: wrap;
+  	padding-top: 2.6875rem;
   }
 
   &__logo {
@@ -49,7 +55,7 @@
     img {
       position: relative;
       z-index: 2;
-      width: 36.3vmax;
+      width: 36.3vw;
       height: auto;
     }
 
@@ -83,18 +89,15 @@
       bottom: 19%;
       right: 0;
     }
-
-    /* span:last-child::before {
-      left: calc(-100% - 1rem);
-    } */
   }
 
   &__advertised-product::before {
     content: "";
     position: absolute;
     width: 36.31vw;
-    height: 123.23%;
-    top: -12.27%;
+    transform: translateY(-50%);
+    height: 69vw;
+    top: 50%;
     right: 34%;
     border-top-left-radius: 100% 50%;
     border-bottom-left-radius: 100% 50%;
@@ -118,7 +121,9 @@
   }
 
   &__title {
+    width: 60%;
     margin: 0;
+    margin-bottom: 4rem;
     font-size: 0.875rem;
     line-height: 1.3;
   }
